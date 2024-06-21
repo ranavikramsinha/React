@@ -10,10 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/ranavikramsinha/React.git"
   },
-  
   "keywords": [
     "react"
   ],
   "author": "Rana Vikram Sinha",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
