@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Learning React",
   "scripts": {
-    "start":"parcel 03_Laying_The_Foundation/Code/index.html",
-    "build":"parcel build 03_Laying_The_Foundation/Code/index.html",
+    "start": "parcel 03_Laying_The_Foundation/Code/index.html",
+    "build": "parcel build 03_Laying_The_Foundation/Code/index.html",
     "test": "jest"
   },
   "repository": {
@@ -17,6 +17,11 @@
   "author": "Rana Vikram Sinha",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.5.0",
+    "eslint": "^9.5.0",
+    "eslint-plugin-react": "^7.34.3",
+    "globals": "^15.6.0",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
