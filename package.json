@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Learning React",
   "scripts": {
-    "start":"parcel 03_Laying_The_Foundation/Code/index.html",
-    "build":"parcel build 03_Laying_The_Foundation/Code/index.html",
+    "start": "parcel 03_Laying_The_Foundation/Code/index.html",
+    "build": "parcel build 03_Laying_The_Foundation/Code/index.html",
     "test": "jest"
   },
   "repository": {
