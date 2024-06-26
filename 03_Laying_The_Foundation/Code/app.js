@@ -30,7 +30,14 @@ const HeadingComponent2 = () => {
   return <h1 className="head">React Functional Component2</h1>;
 };
 
-const Title1 = () => <h1 tabIndex="1">Hare Krishna Hare Rama</h1>;
+const element = <span>=&gt; </span>;
+
+const Title = () => (
+  <h1 tabIndex="1">
+    {element}
+    Hare Krishna Hare Rama
+  </h1>
+);
 
 const title = <h1 tabIndex="1">Hare Krishna Hare Rama</h1>;
 
@@ -39,7 +46,10 @@ const number = 7;
 //* Component Compositions
 const HeadingComponent3 = () => (
   <div id="container">
-    <Title1 />
+    <Title />
+    <Title></Title>
+    {Title()}
+    {12345}
     <h1 className="head">React Functional Component3</h1>
     <h2>{number}</h2>
     <h2>{3 + 6}</h2>
@@ -47,6 +57,8 @@ const HeadingComponent3 = () => (
     {title}
   </div>
 );
+
+//* Note => <Title>, <Title></Title> and {Title()}, these 3 are the same thing
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
