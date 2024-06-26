@@ -9,11 +9,12 @@ export default [
   { languageOptions: { globals: globals.node } },
   {
     ...otherSettings,
-    "env": {
-        "browser": true,
-        "node": true
-    }
+    env: {
+      browser: true,
+      node: true,
+    },
   },
+
   pluginJs.configs.recommended,
   ...fixupConfigRules(pluginReactConfig),
 ];
