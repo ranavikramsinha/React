@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    height: 126px;
+}
+
+.logo{
+    height: 126px;
+}
+
+.nav-items{
+    padding-top: 49px;
+
+}
+
+.nav-items > ul {
+    display: flex;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    margin-right: 30px;
+}
