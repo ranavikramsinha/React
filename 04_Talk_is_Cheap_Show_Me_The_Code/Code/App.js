@@ -86,31 +86,207 @@ const Header = () => {
 //*   )
 //* }
 
+// const RestaurantCard = (props) => {
+//   const{resName, cuisines, rating, deliveryTime} = props
+//   return(
+//     <div className="restaurant-card" style={{backgroundColor: "#fc6203"}}>
+//       <img className="restaurant-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qzwwf2gzqdkqp4nsquzi" alt="Paneer Item Food Logo"/>
+//       <h3>{resName}</h3>
+//       <h4>{cuisines}</h4>
+//       <h4>{rating}</h4>
+//       <h4>{deliveryTime}</h4>
+//     </div>
+//   )
+// }
+
+const restaurantObject = {
+  first: {
+    info: {
+      id: "725082",
+      name: "Pizza Hut",
+      cloudinaryImageId: "490629b70f89da8a5b93fc199ece335e",
+      locality: "Kankar Bagh",
+      areaName: "Kankarbagh",
+      costForTwo: "₹350 for two",
+      cuisines: ["Pizzas"],
+      avgRating: 4.1,
+      parentId: "721",
+      avgRatingString: "4.1",
+      totalRatingsString: "1K+",
+      sla: {
+        deliveryTime: 28,
+        lastMileTravel: 2.2,
+        serviceability: "SERVICEABLE",
+        slaString: "25-30 mins",
+        lastMileTravelString: "2.2 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-02 01:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "Rxawards/_CATEGORY-Pizza.png",
+            description: "Delivery!",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "Delivery!",
+                  imageId: "Rxawards/_CATEGORY-Pizza.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        subHeader: "UPTO ₹100",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/pizza-hut-kankar-bagh-kankarbagh-patna-725082",
+      type: "WEBLINK",
+    },
+  },
+
+  second: {
+    info: {
+      id: "253169",
+      name: "Bikaner Sweets and Pastry Shop",
+      cloudinaryImageId: "gd1wohldbsmjuv5mstp7",
+      locality: "Ghrounda",
+      areaName: "Kankarbagh",
+      costForTwo: "₹449 for two",
+      cuisines: ["Bakery", "Sweets"],
+      avgRating: 4.5,
+      veg: true,
+      parentId: "45906",
+      avgRatingString: "4.5",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 24,
+        lastMileTravel: 2.4,
+        serviceability: "SERVICEABLE",
+        slaString: "20-25 mins",
+        lastMileTravelString: "2.4 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2024-07-01 22:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "Rxawards/_CATEGORY-Mithai.png",
+            description: "Delivery!",
+          },
+          {
+            imageId: "v1695133679/badges/Pure_Veg111.png",
+            description: "pureveg",
+          },
+        ],
+      },
+      isOpen: true,
+      aggregatedDiscountInfoV2: {},
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "Delivery!",
+                  imageId: "Rxawards/_CATEGORY-Mithai.png",
+                },
+              },
+              {
+                attributes: {
+                  description: "pureveg",
+                  imageId: "v1695133679/badges/Pure_Veg111.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          mediaType: "ADS_MEDIA_ENUM_IMAGE",
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+    },
+    analytics: {},
+    cta: {
+      link: "https://www.swiggy.com/restaurants/bikaner-sweets-and-pastry-shop-ghrounda-kankarbagh-patna-253169",
+      type: "WEBLINK",
+    },
+  },
+};
+
 const RestaurantCard = (props) => {
-  const{resName, cuisines, rating, deliveryTime} = props
-  return(
-    <div className="restaurant-card" style={{backgroundColor: "#fc6203"}}>
-      <img className="restaurant-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qzwwf2gzqdkqp4nsquzi" alt="Paneer Item Food Logo"/>
-      <h3>{resName}</h3>
-      <h4>{cuisines}</h4>
-      <h4>{rating}</h4>
-      <h4>{deliveryTime}</h4>
+  const { restaurantData } = props;
+  return (
+    <div className="restaurant-card" style={{ backgroundColor: "#fc6203" }}>
+      <img
+        className="restaurant-logo"
+        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ restaurantData.info.cloudinaryImageId}
+        alt="Paneer Item Food Logo"
+      />
+      <h3>{restaurantData.info.name}</h3>
+      <h4>{restaurantData.info.cuisines}</h4>
+      <h4>{restaurantData.info.avgRating} stars</h4>
+      <h4>{restaurantData.info.sla.deliveryTime} minutes</h4>
+      <h4>{restaurantData.info.costForTwo} minutes</h4>
     </div>
-  )
-}
+  );
+};
 
 //? Body Component for body section: search section, restaurant cards
 const Body = () => {
-  return(
+  return (
     <div className="body">
       <div className="search">Search</div>
       <div className="restaurant-container">
-        <RestaurantCard resName="Meghana Foods" cuisines="Panner, North Indian, Asian" rating="4.0 Star" deliveryTime="25 minutes"/>
-        <RestaurantCard resName="Dev Desi Foods" cuisines="Only Veg Items, Indian" rating="4.3 Star" deliveryTime="15 minutes"/>
+        <RestaurantCard restaurantData={restaurantObject.first} />
+        <RestaurantCard restaurantData={restaurantObject.second} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 //? AppLayout component to show: Header, Body
 const AppLayout = () => {
