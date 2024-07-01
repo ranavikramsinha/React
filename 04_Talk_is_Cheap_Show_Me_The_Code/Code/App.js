@@ -1738,9 +1738,15 @@ const Body = () => {
         <RestaurantCard restaurantData={restaurantList[18]} />
         <RestaurantCard restaurantData={restaurantList[19]} /> */}
 
+        {/* //*  react don't recommend using indexes for keys if order of items may change */}
         {restaurantList.map((restaurant) => {
-        return <RestaurantCard restaurantData={restaurant} />
-      })}
+          return (
+            <RestaurantCard
+              key={restaurant.info.id}
+              restaurantData={restaurant}
+            />
+          );
+        })}
       </div>
     </div>
   );
