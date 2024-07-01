@@ -28,3 +28,23 @@
 .nav-items > ul > li {
     margin-right: 30px;
 }
+
+.restaurant-card{
+    width: 220px;
+    height: 300px;
+    border: 1px solid white
+}
+
+.search{
+    padding: 10px;
+}
+
+.restaurant-logo{
+    width: 180px;
+    margin: 10px 0px 0px 20px;
+}
+
+.restaurant-card h3, h4{
+    margin-left: 10px;
+    margin-top: 15px;
+}

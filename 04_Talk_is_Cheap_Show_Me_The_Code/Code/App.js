@@ -37,13 +37,39 @@ const Header = () => {
   );
 };
 
+// const RestaurantCard = () => {
+//   return(
+//     <div className="restaurant-card">
+//       <h3>Meghana Foods</h3>
+//     </div>
+//   )
+// }
+
+// const styleCard = {
+//   backgroundColor: "#fc6203",
+// }
+
+// const RestaurantCard = () => {
+//   return(
+//     <div className="restaurant-card" style={styleCard}>
+//       <h3>Meghana Foods</h3>
+//     </div>
+//   )
+// }
+
+
 const RestaurantCard = () => {
   return(
-    <div className="restaurant-card">
-      <h3>Meghana Food</h3>
+    <div className="restaurant-card" style={{backgroundColor: "#fc6203"}}>
+      <img className="restaurant-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qzwwf2gzqdkqp4nsquzi" alt="Paneer Item Food Logo"/>
+      <h3>Meghana Foods</h3>
+      <h4>Paneer, North Indian, Asian</h4>
+      <h4>4.0 Star</h4>
+      <h4>25 minutes</h4>
     </div>
   )
 }
+
 
 const Body = () => {
   return(
