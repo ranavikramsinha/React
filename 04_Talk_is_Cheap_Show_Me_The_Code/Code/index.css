@@ -6,7 +6,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid white; */
+    border: 1px solid rgba(255, 255, 255, 0.505);
     height: 126px;
 }
 
@@ -32,8 +32,16 @@
 .restaurant-card{
     width: 220px;
     height: 300px;
-    border: 1px solid white
+    border: 1px solid white;
+    margin-left: 43px;
+    margin-bottom: 10px;
+
 }
+
+/* .restaurant-container > .restaurant-card:nth-child(1){
+    margin-left: 30px;
+
+} */
 
 .search{
     padding: 10px;
@@ -47,4 +55,14 @@
 .restaurant-card h3, h4{
     margin-left: 10px;
     margin-top: 15px;
+}
+
+.restaurant-card:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
 }
